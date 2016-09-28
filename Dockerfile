@@ -21,7 +21,7 @@ RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=acc
 
 
 # Install Tomcat
-RUN wget http://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-8/v8.0.15/bin/apache-tomcat-8.0.15.tar.gz && \
+RUN wget http://mirror.fibergrid.in/apache/tomcat/tomcat-8/v8.0.37/bin/apache-tomcat-8.0.37.tar.gz && \
 	tar -xvf apache-tomcat-8.0.15.tar.gz && \
 	rm apache-tomcat*.tar.gz && \
 	mv apache-tomcat* ${CATALINA_HOME} 
