@@ -44,8 +44,6 @@ RUN groupadd -r tomcat && \
 WORKDIR /opt/tomcat
 
 EXPOSE 8080
-EXPOSE 8009
-
 
 USER tomcat
 CMD ["tomcat.sh"]
