@@ -33,6 +33,9 @@ ADD create_admin_user.sh $CATALINA_HOME/scripts/create_admin_user.sh
 ADD tomcat.sh $CATALINA_HOME/scripts/tomcat.sh
 RUN chmod +x $CATALINA_HOME/scripts/*.sh
 
+#Add war file
+ADD /var/lib/jenkins/workspace/contactinfo/target/ContactInfo2.war /tomcat/webapps
+
 # Create tomcat user
 RUN groupadd -r tomcat && \
 	useradd -g tomcat -d ${CATALINA_HOME} -s /sbin/nologin  -c "Tomcat user" tomcat && \
