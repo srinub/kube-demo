@@ -34,7 +34,7 @@ ADD tomcat.sh $CATALINA_HOME/scripts/tomcat.sh
 RUN chmod +x $CATALINA_HOME/scripts/*.sh
 
 #Add war file
-ADD /var/lib/jenkins/workspace/contactinfo/target/ContactInfo2.war /tomcat/webapps
+ADD /root/ContactInfo2.war /tomcat/webapps
 
 # Create tomcat user
 RUN groupadd -r tomcat && \
