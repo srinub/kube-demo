@@ -12,12 +12,5 @@
         { "containerPort": 8086, "hostPort": 0, "servicePort": 10000, "protocol": "tcp" }
       ]
     }
-  },
-  "healthChecks": [
-    {
-      "protocol": "HTTP",
-      "portIndex": 0,
-      "path": "/"
-    }
-  ]
+  }
 }
