@@ -6,11 +6,17 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "tomcat:8.0",
+      "image": "srinivasbommadevara/tomcat",
       "network": "BRIDGE",
       "portMappings": [
         { "containerPort": 8086, "hostPort": 0, "servicePort": 10000, "protocol": "tcp" }
       ]
     }
+  },
+  "labels": {
+    "HAPROXY_GROUP": "external",
+    "HAPROXY_0_VHOST": "dcos-southeastasia-slavelbdns.southeastasia.cloudapp.azure.com",
+    "HAPROXY_0_MODE": "http",
+	"HAPROXY_0_PORT": "8086"
   }
 }
