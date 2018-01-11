@@ -34,7 +34,7 @@ ADD tomcat.sh $CATALINA_HOME/scripts/tomcat.sh
 RUN chmod +x $CATALINA_HOME/scripts/*.sh
 
 #Add war file
-#ADD ContactInfo2.war /opt/tomcat/webapps
+ADD /mnt/mesos/sandbox/workspace/app-build/target/java-tomcat-maven-example.war /opt/tomcat/webapps
 
 # Create tomcat user
 RUN groupadd -r tomcat && \
