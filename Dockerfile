@@ -18,7 +18,7 @@ RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION
     mv apache-tomcat* tomcat
     
 #Add war file
-/opt/bitnami/apps/jenkins/jenkins_home/workspace/test-ci
+#/opt/bitnami/apps/jenkins/jenkins_home/workspace/test-ci
 #ADD /mnt/mesos/sandbox/workspace/app-build/target/java-tomcat-maven-example.war /tomcat/webapps
 ADD /opt/bitnami/apps/jenkins/jenkins_home/workspace/test-ci/target/java-tomcat-maven-example.war /tomcat/webapps
 
