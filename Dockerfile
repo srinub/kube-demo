@@ -20,7 +20,7 @@ RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION
 #Add war file
 #/opt/bitnami/apps/jenkins/jenkins_home/workspace/test-ci
 #ADD /mnt/mesos/sandbox/workspace/app-build/target/java-tomcat-maven-example.war /tomcat/webapps
-COPY ~/opt/bitnami/apps/jenkins/jenkins_home/workspace/test-cd/java-tomcat-maven-example.war /usr/local/tomcat/webapps
+ADD /java-tomcat-maven-example.war /tomcat/webapps
 
 ADD create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
 ADD run.sh /run.sh
