@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: $deploymentname
+  name: $servicename
   labels:
     app: $appname
     tier: $deploymentname
